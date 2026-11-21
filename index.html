@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Golden Space — გოლდენ სფეისი | შაურმა ჩოხატაურში</title>
+<meta name="description" content="Golden Space — საუკეთესო შაურმა, ბურგერი, ჰოთ დოგი და ფრი ჩოხატაურში. კურიერი, დაჯავშნა, დარეკვა: 568 800 870">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="preloader" id="preloader">
+  <div class="pre-logo">GS</div>
+  <div class="pre-bar"><span></span></div>
+</div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <a href="index.html" class="logo">
+    <span class="logo-mark">GS</span>
+    <span class="logo-text">GOLDEN SPACE<small>გოლდენ სფეისი</small></span>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="#home">მთავარი</a>
+    <a href="#menu">მენიუ</a>
+    <a href="#courier">კურიერი</a>
+    <a href="#booking">დაჯავშნა</a>
+    <a href="map.html">📍 რუკა</a>
+    <a href="#contact">კონტაქტი</a>
+  </nav>
+  <div class="head-actions">
+    <a href="tel:+995568800870" class="btn btn-gold btn-sm call-btn">📞 <span>568 800 870</span></a>
+    <button class="cart-btn" id="cartBtn" aria-label="კალათა">🛒<b id="cartCount">0</b></button>
+    <button class="burger" id="burger" aria-label="მენიუ"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <canvas id="sparks"></canvas>
+  <div class="hero-glow g1"></div><div class="hero-glow g2"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="badge reveal">👑 Good Food • Good Mood</div>
+      <h1 class="reveal">გემრიელი საკვები <span class="shine">ყოველთვის!</span></h1>
+      <p class="reveal">ხრაშუნა ფრი, წვნიანი შაურმა და ოქროსფერი გემო — ჩოხატაურში, რუსთაველის ქუჩაზე. მოდი ან გამოიძახე კურიერი.</p>
+      <div class="hero-cta reveal">
+        <a href="#menu" class="btn btn-gold">🌯 მენიუს ნახვა</a>
+        <a href="#booking" class="btn btn-ghost">📅 დაჯავშნა</a>
+        <a href="tel:+995568800870" class="btn btn-ghost">📞 დარეკვა</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div><b data-count="22">0</b><span>სახეობა მენიუში</span></div>
+        <div><b data-count="5">0</b><span>ვარსკვლავი გემოვნება</span></div>
+        <div><b data-count="100" data-suffix="%">0</b><span>ახალი ინგრედიენტი</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="orbit">
+        <div class="orbit-core"><span>🌯</span></div>
+        <span class="float f1">🍟</span>
+        <span class="float f2">🍔</span>
+        <span class="float f3">🌭</span>
+        <span class="float f4">🍗</span>
+        <span class="float f5">🥤</span>
+        <span class="float f6">🧀</span>
+      </div>
+      <div class="price-tag">შაურმა <b>7₾</b>-დან</div>
+    </div>
+  </div>
+  <a href="#menu" class="scroll-hint">↓</a>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>🌯 შაურმა</span><span>🍔 ბურგერი</span><span>🧀 ყველის სოუსი</span><span>🍟 ფრი</span><span>🌭 ჰოთ დოგი</span><span>🍗 ნაგეტი</span><span>📦 შაურმა ბოქსი</span><span>🥤 სასმელები</span>
+    <span>🌯 შაურმა</span><span>🍔 ბურგერი</span><span>🧀 ყველის სოუსი</span><span>🍟 ფრი</span><span>🌭 ჰოთ დოგი</span><span>🍗 ნაგეტი</span><span>📦 შაურმა ბოქსი</span><span>🥤 სასმელები</span>
+  </div>
+</div>
+
+<!-- MENU -->
+<section class="section" id="menu">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">ჩვენი მენიუ</span>
+      <h2>აირჩიე <span class="shine">შენი გემო</span></h2>
+      <p>დააჭირე „+“ და დაამატე კალათაში — შემდეგ შეუკვეთე კურიერით ან დარეკე.</p>
+    </div>
+    <div class="tabs reveal" id="tabs"></div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<!-- COURIER -->
+<section class="section courier" id="courier">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">საკურიერო მომსახურება</span>
+      <h2>ცხელი, პირდაპირ <span class="shine">შენთან</span></h2>
+      <p>არ გინდა გამოსვლა? ჩვენი კურიერი ცხელ შეკვეთას სახლამდე მოგიტანს.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal tilt"><i>1</i><div class="ico">🛒</div><h3>აირჩიე</h3><p>დაამატე სასურველი კერძები კალათაში.</p></div>
+      <div class="step reveal tilt"><i>2</i><div class="ico">📲</div><h3>შეუკვეთე</h3><p>გამოგვიგზავნე შეკვეთა WhatsApp-ით ან დაგვირეკე.</p></div>
+      <div class="step reveal tilt"><i>3</i><div class="ico">🛵</div><h3>კურიერი გზაშია</h3><p>ახლადმომზადებულ კერძს სწრაფად მოგიტანთ.</p></div>
+      <div class="step reveal tilt"><i>4</i><div class="ico">😋</div><h3>ისიამოვნე</h3><p>Good Food, Good Mood!</p></div>
+    </div>
+    <div class="courier-cta reveal">
+      <a href="tel:+995568800870" class="btn btn-gold btn-lg">📞 გამოიძახე კურიერი: 568 800 870</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section" id="booking">
+  <div class="container booking-wrap">
+    <div class="booking-info reveal">
+      <span class="eyebrow">დაჯავშნა</span>
+      <h2>დაჯავშნე <span class="shine">მაგიდა</span></h2>
+      <p>შეავსე ფორმა და ჯავშანი პირდაპირ ჩვენთან გაიგზავნება. დასადასტურებლად დაგირეკავთ.</p>
+      <ul class="perks">
+        <li>✨ სწრაფი დადასტურება</li>
+        <li>👨‍👩‍👧‍👦 კომპანიებისთვის კომფორტული სივრცე</li>
+        <li>📍 ჩოხატაური, რუსთაველის ქუჩა</li>
+      </ul>
+      <a href="tel:+995568800870" class="btn btn-ghost">📞 ან დარეკე ახლავე</a>
+    </div>
+    <form class="booking-form reveal" id="bookingForm" novalidate>
+      <div class="field"><label for="bName">სახელი</label><input id="bName" type="text" placeholder="შენი სახელი" required></div>
+      <div class="field"><label for="bPhone">ტელეფონი</label><input id="bPhone" type="tel" placeholder="5xx xxx xxx" required></div>
+      <div class="row2">
+        <div class="field"><label for="bDate">თარიღი</label><input id="bDate" type="date" required></div>
+        <div class="field"><label for="bTime">დრო</label><input id="bTime" type="time" required></div>
+      </div>
+      <div class="field"><label for="bGuests">სტუმრების რაოდენობა</label>
+        <select id="bGuests"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>8+</option></select>
+      </div>
+      <div class="field"><label for="bNote">შენიშვნა (არასავალდებულო)</label><textarea id="bNote" rows="2" placeholder="დაბადების დღე, განსაკუთრებული სურვილი..."></textarea></div>
+      <button class="btn btn-gold btn-lg" type="submit">📅 დაჯავშნა</button>
+      <p class="form-ok" id="bookingOk"></p>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">კონტაქტი</span>
+      <h2>მოგვიძებნე <span class="shine">ჩოხატაურში</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="c-card reveal tilt"><div class="ico">📍</div><h3>მისამართი</h3><p>ჩოხატაური,<br>რუსთაველის ქუჩა</p><a href="map.html" class="link">რუკაზე ნახვა →</a></div>
+      <div class="c-card reveal tilt"><div class="ico">📞</div><h3>ტელეფონი</h3><p class="big">568 800 870</p><a href="tel:+995568800870" class="link">დარეკვა →</a></div>
+      <div class="c-card reveal tilt"><div class="ico">🛵</div><h3>კურიერი</h3><p>სწრაფი მიწოდება<br>შეკვეთით</p><a href="#menu" class="link">შეკვეთა →</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="logo"><span class="logo-mark">GS</span><span class="logo-text">GOLDEN SPACE<small>Good Food • Good Mood</small></span></div>
+  <p>© <span id="year"></span> Golden Space — გოლდენ სფეისი. ყველა უფლება დაცულია.</p>
+</footer>
+
+<!-- Floating call -->
+<a href="tel:+995568800870" class="fab" aria-label="დარეკვა">📞</a>
+
+<!-- CART DRAWER -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><h3>🛒 შენი კალათა</h3><button id="closeCart" aria-label="დახურვა">✕</button></div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="total"><span>ჯამი</span><b id="cartTotal">0₾</b></div>
+    <div class="field"><input id="oName" type="text" placeholder="სახელი"></div>
+    <div class="field"><input id="oPhone" type="tel" placeholder="ტელეფონი"></div>
+    <div class="field"><input id="oAddr" type="text" placeholder="მისამართი (კურიერისთვის)"></div>
+    <button class="btn btn-gold" id="orderWa">🛵 შეკვეთა WhatsApp-ით</button>
+    <a class="btn btn-ghost" href="tel:+995568800870">📞 შეუკვეთე დარეკვით</a>
+    <button class="clear" id="clearCart">კალათის გასუფთავება</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

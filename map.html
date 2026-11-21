@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>რუკა — Golden Space | ჩოხატაური, რუსთაველის ქუჩა</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<header class="header scrolled" id="header">
+  <a href="index.html" class="logo">
+    <span class="logo-mark">GS</span>
+    <span class="logo-text">GOLDEN SPACE<small>გოლდენ სფეისი</small></span>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="index.html#home">მთავარი</a>
+    <a href="index.html#menu">მენიუ</a>
+    <a href="index.html#courier">კურიერი</a>
+    <a href="index.html#booking">დაჯავშნა</a>
+    <a href="map.html" class="active">📍 რუკა</a>
+    <a href="index.html#contact">კონტაქტი</a>
+  </nav>
+  <div class="head-actions">
+    <a href="tel:+995568800870" class="btn btn-gold btn-sm call-btn">📞 <span>568 800 870</span></a>
+    <button class="burger" id="burger" aria-label="მენიუ"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<main class="map-page">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">როგორ მოგვაკითხო</span>
+      <h2>ჩვენი <span class="shine">მდებარეობა</span></h2>
+      <p>ჩოხატაური, რუსთაველის ქუჩა — ელოდებით ყოველდღე!</p>
+    </div>
+    <div class="map-wrap">
+      <div class="map-card">
+        <h3>👑 Golden Space</h3>
+        <div class="map-row"><span class="i">📍</span><div><b>მისამართი</b><small>ჩოხატაური, რუსთაველის ქუჩა</small></div></div>
+        <div class="map-row"><span class="i">📞</span><div><b>ტელეფონი</b><small>568 800 870</small></div></div>
+        <div class="map-row"><span class="i">🛵</span><div><b>კურიერი</b><small>მიწოდება შეკვეთით</small></div></div>
+        <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=Rustaveli+street+Chokhatauri+Georgia" target="_blank" rel="noopener">🧭 მარშრუტის აგება</a>
+        <a class="btn btn-ghost" href="tel:+995568800870">📞 დარეკვა</a>
+        <a class="btn btn-ghost" href="index.html#booking">📅 დაჯავშნა</a>
+      </div>
+      <div class="map-frame">
+        <iframe title="Golden Space რუკა" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=Rustaveli%20street%20Chokhatauri%20Georgia&hl=ka&z=16&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="logo"><span class="logo-mark">GS</span><span class="logo-text">GOLDEN SPACE<small>Good Food • Good Mood</small></span></div>
+  <p>© <span id="year"></span> Golden Space — გოლდენ სფეისი.</p>
+</footer>
+
+<a href="tel:+995568800870" class="fab" aria-label="დარეკვა">📞</a>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
